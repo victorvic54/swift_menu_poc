@@ -18,6 +18,7 @@
 		A8417BE224891AC5004DE761 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8417BE124891AC5004DE761 /* Protocols.swift */; };
 		A8417BE424891D8E004DE761 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8417BE324891D8E004DE761 /* MenuOptionCell.swift */; };
 		A8417BE6248928A1004DE761 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8417BE5248928A1004DE761 /* MenuOption.swift */; };
+		A8417BE824894041004DE761 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8417BE724894041004DE761 /* SettingsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		A8417BE124891AC5004DE761 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		A8417BE324891D8E004DE761 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
 		A8417BE5248928A1004DE761 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
+		A8417BE724894041004DE761 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				A8417BDC24890DA8004DE761 /* ContainerController.swift */,
 				A8417BDB24890DA8004DE761 /* HomeController.swift */,
 				A8417BDA24890DA8004DE761 /* MenuController.swift */,
+				A8417BE724894041004DE761 /* SettingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8417BE824894041004DE761 /* SettingsController.swift in Sources */,
 				A8417BE424891D8E004DE761 /* MenuOptionCell.swift in Sources */,
 				A8417BE6248928A1004DE761 /* MenuOption.swift in Sources */,
 				A8417BDD24890DA8004DE761 /* MenuController.swift in Sources */,

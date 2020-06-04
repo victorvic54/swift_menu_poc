@@ -24,6 +24,14 @@ class ContainerController: UIViewController {
         return .lightContent
     }
     
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isExpanded
+    }
+    
     func configureHomeController() {
         let homeController = HomeController()
         centerController = UINavigationController(rootViewController: homeController)
@@ -56,9 +64,6 @@ class ContainerController: UIViewController {
             }, completion: nil)
         } else {
             // hide menu
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                   self.centerController.view.frame.origin.x = 0
-               }, completion: nil)
             
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
                 self.centerController.view.frame.origin.x = 0
@@ -67,6 +72,8 @@ class ContainerController: UIViewController {
                 self.didSelectMenuOption(menuOption: menuOption)
             }
         }
+        
+        animateStatusBar()
     }
     
     func didSelectMenuOption(menuOption: MenuOption) {
@@ -78,8 +85,20 @@ class ContainerController: UIViewController {
         case .Notifications:
             print("Show Notifications")
         case .Settings:
-            print("Show Settings")
+            let controller = SettingsController()
+            controller.username = "Batman"
+
+            let navigationController = UINavigationController(rootViewController: controller)
+            navigationController.modalTransitionStyle = .crossDissolve
+            navigationController.modalPresentationStyle = .fullScreen
+            present(navigationController, animated: true)
         }
+    }
+    
+    func animateStatusBar() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }, completion: nil)
     }
 }
 
